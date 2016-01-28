@@ -48,3 +48,15 @@ CREATE TABLE HORARIOS (ID_HORARIO INTEGER,
                        );
         
         DESCRIBE HORARIOS;
+        
+        --una secuencia en oracle sirve par enlazar una tabla a un pk auto_increment
+        CREATE SEQUENCE SEC_PELICULA;
+        STAR WITH 1
+        INCREMENT BY 1
+        NOMAXVALUE;
+        
+        --NOTA solo se puede asociar una sola tabla
+        --para asociar se necesita un nuevo objeto de base de datos este objeto va a serr el q insertara el o los nuevos registros
+        --en la tabla. JAMAS se usa un INSERT INTO en oracle cuando tiene un (PRIMARY KEY auto-generado) 
+        --TAREA****** INJECCION DE SQL Y CASOS REALES NOTABLES
+        
