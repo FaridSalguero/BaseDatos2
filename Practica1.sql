@@ -60,3 +60,23 @@ CREATE TABLE HORARIOS (ID_HORARIO INTEGER,
         --en la tabla. JAMAS se usa un INSERT INTO en oracle cuando tiene un (PRIMARY KEY auto-generado) 
         --TAREA****** INJECCION DE SQL Y CASOS REALES NOTABLES
         
+        SET SERVEROUTPUT ON;
+        CREATE OR REPLACE PROCEDURE HOLA_MUNDO( NOMBRE IN VARCHAR2)
+        AS
+        --LOGICA
+        BEGIN 
+        DBMS_OUTPUT.PUT_LINE('HOLA COMO ESTAS:  '||NOMBRE);
+        END;
+        /
+        
+        DECLARE
+        VALOR NUMBER;
+        BEGIN
+        SUMA(12,8,VALOR);
+        SYS.dbms_output.put_line('LA SUMA ES: '||VALOR);
+        
+        HOLA_MUNDO ('JULIO');
+        END;
+        /
+        
+        
